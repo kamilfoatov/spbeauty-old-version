@@ -22,16 +22,12 @@ const ButtonRightWrapper = styled.div`
 function IconsRow() {
     return (
         <div className='d-inline-flex flex-row align-items-center align-self-center'>
-            <ButtonLeftWrapper>
-                <Clickable>
-                    <div className="text-rg-bd">Сообщения (0)</div>
-                </Clickable>
-            </ButtonLeftWrapper>
-            <ButtonRightWrapper>
-                <Clickable>
-                    <div className="text-rg-bd">Оповещения (0)</div>
-                </Clickable>
-            </ButtonRightWrapper>
+            <div className='pe-1'>
+                <IconOnlyButton icon={<MessagesIcon/>}/>
+            </div>
+            <div className='padding-right-icon'>
+                <IconOnlyButton icon={<NotificationsIcon/>}/>
+            </div>
         </div>
     );
 }
